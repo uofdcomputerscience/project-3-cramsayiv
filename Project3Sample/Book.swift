@@ -13,9 +13,9 @@ struct Book: Codable {
     let title: String
     let author: String
     let published: String
-    let imageURLString: String
+    let imageURLString: String?
     
     var imageURL: URL? {
-        return URL(string: imageURLString)
+        return URL(string: imageURLString ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1V6QMjefvZx3rcqDhYg-IVLowcQgR-QA_S7PnMYZJAIQYiwZp&s")
     }
 }
